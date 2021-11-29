@@ -1,0 +1,60 @@
+
+<pre>
+  BKIP: 01
+  Title: Wrapped Bunkercoins depolyment
+  Author: krlnokrl <krlnokrl@gmail.com>
+  Status: Draft
+  Created: 2021-11-29
+</pre>
+
+==Abstract==
+
+This BKIP proposes a plan to deploy and distribute a wrapped version of the BKC token on other chains.
+
+==Motivation==
+
+Facilitate the exchange and transfer of Bunkercoins on other blockchains by wrapping the asset in an ERC20 token.
+
+==Definitions==
+
+:BKC - ''Bunkercoin coin assets;''
+:wBKC - ''wrapped BKC as ERC20 on an external chain;''
+:keyholder - ''a developer trusted with holding the private keys and handling transfers/minting of tokens;''
+:merchant - ''typically an exchange or service transacting the coin;''
+
+==Specification==
+
+The proposed approach consists of 2 stages of deploying and distributing the ERC20 wrapped tokens. 
+
+===Stage 1===
+
+Initial distribution should consist of:
+# Creating a ''(multisig)'' trusted vault wallet on the BKC blockchain. This wallet will hold an amount of frozen BKC equal with the amount of minted wBKC.
+# Deploy a fork of the WBTC contract (ERC20 token). The contract should be owned by a trusted ''(multisig)'' keyholder.
+# Do a wave locking of BKC and minting of wBKC 1:1.
+#: The keyholder is responsible for keeping track of BKC transfers made to the BKC vault and should mint the wBKC tokens at the end of the deposit period. ''(Recommended all minting should be done at once)''
+
+Note: During stage 1 the amount of wBKC is fixed by the initial minting. The trust is also focus onto the keyholder who must mint the tokens at the end of the distribution period and after not defraud the BKC vault or mint any uncovered tokens.
+<br>
+Exchanges willing to exchange BKC - wBKC would need to hold and manage a pool of both coins and manage their own trust with the users.
+<br>
+''* More mining rounds could be set-up if request is high *''
+
+===Stage 2===
+
+Decentralization should consist of:
+# Transfer ownership of the wBKC contract to an controller type contract that will split the responsibilities of maintaining and minting.
+#: The Controlled contract should allow for separate merchants, custodians and developers access.
+# Elect a custodian for maintaining the BKC vault and the minting wBKC tokens.
+# Create a MultiSigWallet for owning the contracts and updating the code.
+
+Note: During this stage multiple merchants can be selected to request wBKC minting with the approval and coverage of the custodian. (decentralization of minting wBKC)
+Exchanges willing to exchange BKC - wBKC could issue mint requests to stabilize the price and refill their pools.
+
+==Deployment Details==
+
+To be determined:
+* Keyholder: address and contact
+* wBKC contract address:
+* BKC Vault address:
+* Period of initial distribution:  ''from, to''
