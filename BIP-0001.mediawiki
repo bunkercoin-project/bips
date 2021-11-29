@@ -1,6 +1,6 @@
 
 <pre>
-  BKIP: 01
+  BIP: 01
   Title: Wrapped Bunkercoins depolyment
   Author: krlnokrl <krlnokrl@gmail.com>
   Status: Draft
@@ -9,7 +9,7 @@
 
 ==Abstract==
 
-This BKIP proposes a plan to deploy and distribute a wrapped version of the BKC token on other chains.
+This BIP proposes a plan to deploy and distribute a wrapped version of the BKC token on other chains.
 
 ==Motivation==
 
