@@ -13,24 +13,24 @@ This BIP proposes a plan to deploy and distribute a wrapped version of the BKC t
 
 ==Motivation==
 
-Facilitate the exchange and transfer of Bunkercoins on other blockchains by wrapping the asset in an ERC20 token.
+Facilitate the exchange and transfer of Bunkercoins on other blockchains by wrapping the asset in an BEP20 token.
 
 ==Definitions==
 
 :BKC - ''Bunkercoin coin assets;''
-:wBKC - ''wrapped BKC as ERC20 on an external chain;''
+:wBKC - ''wrapped BKC as BEP20 token on an external chain;''
 :keyholder - ''a developer trusted with holding the private keys and handling transfers/minting of tokens;''
 :merchant - ''typically an exchange or service transacting the coin;''
 
 ==Specification==
 
-The proposed approach consists of 2 stages of deploying and distributing the ERC20 wrapped tokens. 
+The proposed approach consists of 2 stages of deploying and distributing the BEP20 wrapped tokens. 
 
 ===Stage 1===
 
 Initial distribution should consist of:
 # Creating a ''(multisig)'' trusted vault wallet on the BKC blockchain. This wallet will hold an amount of frozen BKC equal with the amount of minted wBKC.
-# Deploy a fork of the WBTC contract (ERC20 token). The contract should be owned by a trusted ''(multisig)'' keyholder.
+# Deploy a fork of the WBTC contract (BEP20 token). The contract should be owned by a trusted ''(multisig)'' keyholder.
 # Do a wave locking of BKC and minting of wBKC 1:1.
 #: The keyholder is responsible for keeping track of BKC transfers made to the BKC vault and should mint the wBKC tokens at the end of the deposit period. ''(Recommended all minting should be done at once)''
 
