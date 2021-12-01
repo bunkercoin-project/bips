@@ -58,3 +58,4 @@ To be determined:
 * wBKC contract address:
 * BKC Vault address:
 * Period of initial distribution:  ''from, to''
+* Custodian site manager
