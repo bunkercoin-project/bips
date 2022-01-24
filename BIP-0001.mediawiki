@@ -3,7 +3,7 @@
   BIP: 01
   Title: Wrapped Bunkercoins depolyment
   Author: krlnokrl <krlnokrl@gmail.com>
-  Status: Draft
+  Status: Accepted - Complete 
   Created: 2021-11-29
 </pre>
 
